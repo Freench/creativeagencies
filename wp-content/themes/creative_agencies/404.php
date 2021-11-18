@@ -6,7 +6,7 @@ include('header.php');
     <h1>404</h1>
 </div>
 
-<?php a
+<?php
 
 
 include('footer.php');
