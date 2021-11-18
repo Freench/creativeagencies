@@ -7,6 +7,75 @@ Description: Theme of creative agencies
 Version: 1.0
 */
 
+html, body {
+    margin:0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: GothamBook;
+}
+a:link, a:visited, a:active{
+    text-decoration: none;
+    color: #d11141;
+}
+a:hover{
+    color: #d44569;
+}
+::selection{
+    color: white;
+    background-color: #d11141;
+}
+h1, h2, h3, h4, h5{
+    font-weight: normal;
+    margin:0;
+    padding: 0;
+    line-height: 100%;
+}
 header{
-    height:50vh; overflow:hidden;
+    height:10vh; overflow:hidden;
+}
+
+.text-black{
+    color: #222222;
+}
+.background-black{
+    background-color: #212121;
+}
+.background-red{
+    background-color: #d11141;
+}
+/*SECTION 2*/
+#section2{
+    background-color: #d11141;
+    height: 90vh;
+    width: 100vw;
+}
+
+.letter{
+    font-size: 247px;
+    position: absolute;
+
+}
+/*FIN SECTION 2*/
+
+
+
+@font-face {
+    font-family: Roboto;
+    src: url('roboto-regular-webfont.woff2') format("woff2"), url('roboto-regular-webfont.woff') format("woff"), url('Roboto-Regular.ttf') format("ttf");
+}
+@font-face {
+    font-family: GothamMedium;
+    src: url('gothammedium-webfont.woff2') format("woff2"), url('gothammedium-webfont.woff') format("woff"),url('GothamMedium.ttf') format("ttf");
+}
+@font-face {
+    font-family: GothamBold;
+    src: url('gothambold-webfont.woff2') format("woff2"), url('gothambold-webfont.woff') format("woff"), url('GothamBold.ttf') format("ttf");
+}
+@font-face {
+    font-family: GothamBook;;
+    src: url('gothambook-webfont.woff2') format("woff2"), url('gothambook-webfont.woff') format("woff"), url('GothamBook.ttf') format("ttf") ;
 }
