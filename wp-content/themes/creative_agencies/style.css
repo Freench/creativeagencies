@@ -26,7 +26,7 @@ a:hover{
 }
 ::selection{
     color: white;
-    background-color: #d11141;
+    background-color: #d44569;
 }
 h1, h2, h3, h4, h5{
     font-weight: normal;
@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5{
     line-height: 100%;
 }
 header{
-    height:10vh; overflow:hidden;
+    height:20vh; overflow:hidden;
 }
 
 .text-black{
@@ -59,7 +59,6 @@ header{
 #section2{
     background-color: #d11141;
     height: 90vh;
-    width: 100vw;
 }
 
 .letter{
@@ -73,7 +72,88 @@ header{
 
 /*FIN SECTION 3*/
 
+
 /*SECTION 4*/
+
+#section4{
+    background-color: #ffffff;
+    min-height: 100vh;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+
+
+#s4head {
+    margin: auto;
+    position: relative;
+    text-align: center;
+
+}
+
+#section4 h2 {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 5;
+    font-family: GothamMedium;
+    font-size: 38px;
+    text-transform: uppercase;
+}
+
+.watermarkS4 {
+    color: #db4168;
+    font-size: 247px;
+    font-family: RobotoBlack;
+    text-transform: uppercase;
+    margin-bottom: -15px;
+}
+
+#s4head p {
+    transform: translateY(-50px);
+}
+
+.recentPosts {
+    width: 76%;
+    margin: auto;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.singleDisplay {
+    max-width: 22%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-items: flex-start;
+}
+
+.singleDisplay h5 {
+    font-size: 18px;
+    color: #d11141;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 20px 0 15px 0;
+}
+
+.singleDisplay img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.singleContent {
+    margin: 0 10px 0 10px;
+    padding-bottom: 10px;
+    height: 171px;
+    overflow: hidden; 
+}
+
 /*FIN SECTION 4*/
 
 /*FOOTER*/
@@ -81,6 +161,10 @@ header{
 @font-face {
     font-family: Roboto;
     src: url('roboto-regular-webfont.woff2') format("woff2"), url('roboto-regular-webfont.woff') format("woff"), url('Roboto-Regular.ttf') format("ttf");
+}
+@font-face {
+    font-family: RobotoBlack;
+    src: url('roboto-black-webfont.woff2') format("woff2"), url('roboto-black-webfont.woff') format("woff"), url('Roboto-Black.ttf') format("ttf");
 }
 @font-face {
     font-family: GothamMedium;
@@ -91,6 +175,6 @@ header{
     src: url('gothambold-webfont.woff2') format("woff2"), url('gothambold-webfont.woff') format("woff"), url('GothamBold.ttf') format("ttf");
 }
 @font-face {
-    font-family: GothamBook;;
+    font-family: GothamBook;
     src: url('gothambook-webfont.woff2') format("woff2"), url('gothambook-webfont.woff') format("woff"), url('GothamBook.ttf') format("ttf") ;
 }
