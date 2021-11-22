@@ -3,8 +3,6 @@
 include('header.php');
 ?>
 
-
-
 <article id="section1">
     <?php include('section1.php'); ?>
 </article>
@@ -20,7 +18,6 @@ include('header.php');
 <article id="section4">
     <?php include('section4.php'); ?>
 </article>
-
 
 
 

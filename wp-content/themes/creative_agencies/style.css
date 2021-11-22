@@ -6,7 +6,17 @@ Author URI: https://www.accesscodeschool.fr/
 Description: Theme of creative agencies
 Version: 1.0
 */
+<<<<<<< HEAD
+ /* div{
+    border: dotted 1px blue;
+}  */
+=======
 
+li {
+    list-style: none;
+}
+
+>>>>>>> 0674c7fee68891c77033e569b898b8de2b6878d9
 html, body {
     margin:0;
     padding: 0;
@@ -26,7 +36,7 @@ a:hover{
 }
 ::selection{
     color: white;
-    background-color: #d11141;
+    background-color: #d44569;
 }
 h1, h2, h3, h4, h5{
     font-weight: normal;
@@ -35,7 +45,7 @@ h1, h2, h3, h4, h5{
     line-height: 100%;
 }
 header{
-    height:10vh; overflow:hidden;
+    height:20vh; overflow:hidden;
 }
 
 .text-black{
@@ -47,35 +57,356 @@ header{
 .background-red{
     background-color: #d11141;
 }
+/*HEADER*/
+
+/*FIN HEADER*/
+
+/*SECTION 1*/
+
+/*FIN SECTION 1*/
+
 /*SECTION 2*/
 #section2{
     background-color: #d11141;
+    color: white;
     height: 90vh;
-    width: 100vw;
+<<<<<<< HEAD
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
+#s2-title-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+=======
+}
+>>>>>>> 0674c7fee68891c77033e569b898b8de2b6878d9
 
+}
 .letter{
-    font-size: 247px;
+    z-index: 1;
+    font-size: 22vh;
     position: absolute;
+    font-family: RobotoBlack ;
+    color: #da3d64;
+}
+#s2-title{
+    z-index: 2;
+    text-transform: uppercase;
+    font-family: GothamMedium;
+    font-size: calc(1.8vw + 15px);
+    /* font-weight: 500; */
+}
+#s2-content-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:flex-start;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.s2-bloc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 30vh; */
+    width: 20vw;
+    margin-left: 2.8vw;
+    margin-right: 2.8vw;
+}
+#section2 img{
+    height: 3vw;
+    margin-bottom: 20%;
+}
+#section2 h3{
+    text-transform: uppercase;
+    font-family: GothamMedium;
+    font-size: calc(1vw + 7px);
+    margin-bottom: 25px;
+    margin-top: 25px;
+    text-align: center;
 
+}
+#section2 p{
+    font-size: calc(0.8vw + 5px);
+    font-family: GothamBook;
+    line-height: calc(1vh + 1.2vw + 4px);
+    text-align: center;
 }
 /*FIN SECTION 2*/
 
+/*SECTION 3*/
+#section3{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.s3-project{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+
+}
+.s3-project:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.s3-project-content{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    padding-left: 10vw;
+    width: 50%;
+    height: 100%;
+    background-color: #222222;
+    color: white;
+    padding-right: 5vw;
+    font-size: calc(0.8vw + 5px);
+}
+.s3-project:nth-child(even) .s3-project-content{
+    padding-right: 10vw;
+    padding-left: 5vw;
+    background-color: #f3f3f3;
+    color: black;
+
+}
+.s3-img-container{
+    width: 50%;
+}
+.s3-img-container img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+#section3 h3{
+    text-transform: uppercase;
+    margin-top: 4vh;
+    margin-bottom: calc(5px + 6vh);
+}
+/*FIN SECTION 3*/
 
 
+/*SECTION 4*/
+
+#section4{
+    background-color: #ffffff;
+    min-height: 100vh;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+
+
+#s4head {
+    margin: auto;
+    position: relative;
+    text-align: center;
+
+}
+
+#section4 h2 {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 5;
+    font-family: GothamMedium;
+    font-size: 38px;
+    text-transform: uppercase;
+}
+
+.watermarkS4 {
+    color: #db4168;
+    font-size: 247px;
+    font-family: RobotoBlack;
+    text-transform: uppercase;
+    margin-bottom: -15px;
+}
+
+#s4head p {
+    transform: translateY(-50px);
+}
+
+.recentPosts {
+    width: 76%;
+    margin: auto;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.singleDisplay {
+    max-width: 22%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-items: flex-start;
+}
+
+.singleDisplay h5 {
+    font-size: 18px;
+    color: #d11141;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 20px 0 15px 0;
+}
+
+.singleDisplay img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+}
+
+.singleDisplay img:hover {
+    -webkit-transform: scale(1.05);
+	transform: scale(1.05);
+    opacity: 0.8;
+}
+
+.singleContent {
+    margin: 0 10px 0 10px;
+    padding-bottom: 10px;
+    height: 171px;
+    overflow: hidden;
+}
+
+/*FIN SECTION 4*/
+
+/*PAGE SINGLES */ 
+
+.bg {
+    background-color: #222222;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.single {
+    background-color: white;
+    box-sizing: border-box;
+    max-width: 60%;
+    margin: auto;
+    margin-bottom: 5vh;
+    box-shadow: 10px 8px 0px #d11141;
+}
+
+.post-content {
+    font-family: GothamBook;
+    width: 80%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.singleContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 15px;
+}
+
+.single h1 {
+    font-family: GothamMedium;
+    color: #d11141;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+
+
+/* COMMENTAIRES  */
+
+.post-comments {
+    background-color: white;
+    max-width: 60%;
+    margin: auto;
+    margin-bottom: 5vh;
+    box-shadow: 10px 8px 0px #929292;
+}
+.comments {
+    max-width: 60%;
+    margin: auto;
+    padding-bottom: 15px;
+    padding-top: 5vh;
+}
+
+#reply-title, #comments {
+    color: #d11141;
+    padding-bottom: 10px;
+}
+
+#submit {
+    background-color: #d11141;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.2s
+  }
+
+  #submit:hover {
+    background-color: #222;
+  }
+
+  #cancel-comment-reply-link {
+    color: #222;
+  }
+
+  #cancel-comment-reply-link:hover {
+    color: #d11141;
+  }
+
+  .comment-form-comment label {
+      display: none;
+  }
+
+  .comment-body {
+      margin-bottom: 15px;
+  }
+
+  .comment-body p {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+/*FIN PAGE SINGLES*/
+
+/*FOOTER*/
+/*FIN FOOTER*/
 @font-face {
     font-family: Roboto;
     src: url('roboto-regular-webfont.woff2') format("woff2"), url('roboto-regular-webfont.woff') format("woff"), url('Roboto-Regular.ttf') format("ttf");
 }
 @font-face {
+    font-family: RobotoBlack;
+    src: url('roboto-black-webfont.woff2') format("woff2"), url('roboto-black-webfont.woff') format("woff"), url('Roboto-Black.ttf') format("ttf");
+}
+@font-face {
     font-family: GothamMedium;
-    src: url('gothammedium-webfont.woff2') format("woff2"), url('gothammedium-webfont.woff') format("woff"),url('GothamMedium.ttf') format("ttf");
+    src:  url('gothammedium-webfont.woff2') format("woff2"), url('gothammedium-webfont.woff') format("woff"),url('GothamMedium.ttf') format("ttf");
 }
 @font-face {
     font-family: GothamBold;
     src: url('gothambold-webfont.woff2') format("woff2"), url('gothambold-webfont.woff') format("woff"), url('GothamBold.ttf') format("ttf");
 }
 @font-face {
-    font-family: GothamBook;;
+    font-family: GothamBook;
     src: url('gothambook-webfont.woff2') format("woff2"), url('gothambook-webfont.woff') format("woff"), url('GothamBook.ttf') format("ttf") ;
 }
