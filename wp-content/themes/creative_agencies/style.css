@@ -145,16 +145,91 @@ header{
     width: 100%;
     height: auto;
     object-fit: cover;
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+}
+
+.singleDisplay img:hover {
+    -webkit-transform: scale(1.05);
+	transform: scale(1.05);
+    opacity: 0.8;
 }
 
 .singleContent {
     margin: 0 10px 0 10px;
     padding-bottom: 10px;
     height: 171px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 /*FIN SECTION 4*/
+
+/*PAGE SINGLES */ 
+
+.bg {
+    background-color: #222222;
+    display: flex;
+    align-content: center;
+    padding-top: 5vh;
+    padding-bottom: 15vh;
+}
+
+.single {
+    background-color: white;
+    box-sizing: border-box;
+    width: 60%;
+    margin: auto;
+    box-shadow: 10px 8px 0px #d11141;
+}
+
+.post-content {
+    font-family: GothamBook;
+    width: 80%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.singleContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 15px;
+}
+
+.single h1 {
+    font-family: GothamMedium;
+    color: #d11141;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.post-comments {
+    display: flex;
+    justify-content: center;
+}
+
+/* COMMENTAIRES  */
+
+#submit {
+    background-color: #d11141;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.2s
+  }
+
+  #submit:hover {
+    background-color: #222;
+  }
+
+/*FIN PAGE SINGLES*/
 
 /*FOOTER*/
 /*FIN FOOTER*/
