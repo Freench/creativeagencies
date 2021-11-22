@@ -1,5 +1,6 @@
 <?php
 
+/* main menu */
 function MainMenu()
 {
     register_nav_menus(
@@ -10,6 +11,18 @@ function MainMenu()
 }
 add_action('init', 'MainMenu');
 
+/* active nav */
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+
+function special_nav_class ($classes, $item) {
+	if (in_array('current-menu-item', $classes) ){
+		$classes[] = 'active ';
+	}
+	
+	return $classes;
+}
+
+/* menu socila (right) */
 function SocialMenu(){
     register_nav_menus(
         array(
@@ -20,16 +33,7 @@ function SocialMenu(){
 add_action('init', 'SocialMenu');
 
 
-/* active nav*/
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 
-function special_nav_class ($classes, $item) {
-	if (in_array('current-menu-item', $classes) ){
-		$classes[] = 'active ';
-	}
-	
-	return $classes;
-}
 
 /*
 * On utilise une fonction pour créer notre custom post type 'projets'

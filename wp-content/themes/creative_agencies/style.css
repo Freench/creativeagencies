@@ -16,7 +16,7 @@ html{
 }
 body{
     font-family: GothamBook;
-    background-color: rgb(44, 44, 44);
+    background-color: #222222;
 }
 @font-face {
     font-family: Roboto;
@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5{
     line-height: 100%;
 }
 
+/* reset list style */
 ul,
 ul li,
 ul ul li {
@@ -79,8 +80,11 @@ header{
     justify-content: space-between;
     align-items:center;
     margin:0 10vw;
+    max-width: 1280px;
+    /* border: 1px dotted blue; */
  
 }
+
 hr{ 
     margin:0;
     border:0;
@@ -102,6 +106,7 @@ hr{
 .menu-item a:hover{ color:#d11141; }
 #mainMenu .menu-item {
     margin-right: 34px;
+    font-size: px;;
     line-height: 114px;
     font-family: Roboto;
     white-space: nowrap;
@@ -132,4 +137,13 @@ hr{
 /*FIN SECTION 2*/
 
 
-
+/* Contact */
+#contact{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1280px;
+    border: 1px dotted blue;
+    margin:0 10vw;
+}
