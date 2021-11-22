@@ -6,17 +6,9 @@ Author URI: https://www.accesscodeschool.fr/
 Description: Theme of creative agencies
 Version: 1.0
 */
-<<<<<<< HEAD
  /* div{
     border: dotted 1px blue;
 }  */
-=======
-
-li {
-    list-style: none;
-}
-
->>>>>>> 0674c7fee68891c77033e569b898b8de2b6878d9
 html, body {
     margin:0;
     padding: 0;
@@ -70,7 +62,6 @@ header{
     background-color: #d11141;
     color: white;
     height: 90vh;
-<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -79,9 +70,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-=======
-}
->>>>>>> 0674c7fee68891c77033e569b898b8de2b6878d9
 
 }
 .letter{
