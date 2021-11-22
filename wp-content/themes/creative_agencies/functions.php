@@ -61,4 +61,23 @@ function custom_post_type_projects() {
 
 }
 
+
+// Commentaires pour les articles de blogs // 
+add_filter('comment_form_default_fields', 'website_remove');
+function website_remove($fields)
+{
+if(isset($fields['url']))
+unset($fields['url']);
+return $fields;
+}
+
+function wpb_move_comment_field_to_bottom( $fields ) {
+	$comment_field = $fields['comment'];
+	unset( $fields['comment'] );
+	$fields['comment'] = $comment_field;
+	return $fields;
+	}
+	 
+	add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
+
 add_action( 'init', 'custom_post_type_projects', 0 );

@@ -7,6 +7,10 @@ Description: Theme of creative agencies
 Version: 1.0
 */
 
+li {
+    list-style: none;
+}
+
 html, body {
     margin:0;
     padding: 0;
@@ -169,17 +173,16 @@ header{
 
 .bg {
     background-color: #222222;
-    display: flex;
-    align-content: center;
     padding-top: 5vh;
-    padding-bottom: 15vh;
+    padding-bottom: 5vh;
 }
 
 .single {
     background-color: white;
     box-sizing: border-box;
-    width: 60%;
+    max-width: 60%;
     margin: auto;
+    margin-bottom: 5vh;
     box-shadow: 10px 8px 0px #d11141;
 }
 
@@ -206,12 +209,28 @@ header{
     padding: 15px;
 }
 
-.post-comments {
-    display: flex;
-    justify-content: center;
-}
+
 
 /* COMMENTAIRES  */
+
+.post-comments {
+    background-color: white;
+    max-width: 60%;
+    margin: auto;
+    margin-bottom: 5vh;
+    box-shadow: 10px 8px 0px #929292;
+}
+.comments {
+    max-width: 60%;
+    margin: auto;
+    padding-bottom: 15px;
+    padding-top: 5vh;
+}
+
+#reply-title, #comments {
+    color: #d11141;
+    padding-bottom: 10px;
+}
 
 #submit {
     background-color: #d11141;
@@ -228,6 +247,31 @@ header{
   #submit:hover {
     background-color: #222;
   }
+
+  #cancel-comment-reply-link {
+    color: #222;
+  }
+
+  #cancel-comment-reply-link:hover {
+    color: #d11141;
+  }
+
+  .comment-form-comment label {
+      display: none;
+  }
+
+  .comment-body {
+      margin-bottom: 15px;
+  }
+
+  .comment-body p {
+    margin-bottom: 0;
+}
+
+
+
+
+
 
 /*FIN PAGE SINGLES*/
 

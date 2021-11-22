@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="bg">
-<div class="main single">
+    <div class="main single">
 
     <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
@@ -28,23 +28,26 @@
             </p>
             </div>
 
-
-        <div class="post-comments">
-          <?php comments_template(); ?>
         </div>
-
-
-
-
-
-        
-
     </div>
+   
+
+
+
+    <div class="post-comments">
+        <div class="comments">
+            <?php comments_template(); ?>
+        </div>
+    </div>
+
+
+
     <?php endwhile; ?>
     <?php endif; ?>
-      
-
+    
 </div>
 
-</div>
+
+
+
 
