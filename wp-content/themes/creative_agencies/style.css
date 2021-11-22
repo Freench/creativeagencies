@@ -26,7 +26,25 @@ html{
 }
 body{
     font-family: GothamBook;
+    background-color: #222222;
 }
+@font-face {
+    font-family: Roboto;
+    src: url('roboto-regular-webfont.woff2') format("woff2"), url('roboto-regular-webfont.woff') format("woff"), url('Roboto-Regular.ttf') format("ttf");
+}
+@font-face {
+    font-family: GothamMedium;
+    src: url('gothammedium-webfont.woff2') format("woff2"), url('gothammedium-webfont.woff') format("woff"),url('GothamMedium.ttf') format("ttf");
+}
+@font-face {
+    font-family: GothamBold;
+    src: url('gothambold-webfont.woff2') format("woff2"), url('gothambold-webfont.woff') format("woff"), url('GothamBold.ttf') format("ttf");
+}
+@font-face {
+    font-family: GothamBook;;
+    src: url('gothambook-webfont.woff2') format("woff2"), url('gothambook-webfont.woff') format("woff"), url('GothamBook.ttf') format("ttf") ;
+}
+
 a:link, a:visited, a:active{
     text-decoration: none;
     color: #d11141;
@@ -44,9 +62,22 @@ h1, h2, h3, h4, h5{
     padding: 0;
     line-height: 100%;
 }
+<<<<<<< HEAD
 header{
     height:20vh; overflow:hidden;
+=======
+
+/* reset list style */
+ul,
+ul li,
+ul ul li {
+   margin:0;
+   padding: 0;
+   text-indent: 0;
+   list-style-type: none
+>>>>>>> 26541394719055ea315b7f23279dbc7eeb578c2f
 }
+
 
 .text-black{
     color: #222222;
@@ -57,6 +88,7 @@ header{
 .background-red{
     background-color: #d11141;
 }
+<<<<<<< HEAD
 /*HEADER*/
 
 /*FIN HEADER*/
@@ -64,6 +96,56 @@ header{
 /*SECTION 1*/
 
 /*FIN SECTION 1*/
+=======
+
+header{
+    height: 114px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin:0 10vw;
+    max-width: 1280px;
+    /* border: 1px dotted blue; */
+ 
+}
+
+hr{ 
+    margin:0;
+    border:0;
+    background-color: 	#77889950;
+    height: 1px;
+}
+
+
+/* Menu */
+.menu {
+    display: flex;
+}
+
+#navs{
+    display: flex;
+}
+
+.menu-item a:link, a:visited, a:active{ color:white; }
+.menu-item a:hover{ color:#d11141; }
+#mainMenu .menu-item {
+    margin-right: 34px;
+    font-size: px;;
+    line-height: 114px;
+    font-family: Roboto;
+    white-space: nowrap;
+}
+
+.active{
+    border-bottom: 4px solid #d11141;
+}
+
+#socialMenu .menu-item{
+    margin-right: 18px;
+    line-height: 114px;
+}
+
+>>>>>>> 26541394719055ea315b7f23279dbc7eeb578c2f
 
 /*SECTION 2*/
 #section2{
@@ -324,6 +406,7 @@ header{
 
 
 
+<<<<<<< HEAD
 /* COMMENTAIRES  */
 
 .post-comments {
@@ -409,4 +492,15 @@ header{
 @font-face {
     font-family: GothamBook;
     src: url('gothambook-webfont.woff2') format("woff2"), url('gothambook-webfont.woff') format("woff"), url('GothamBook.ttf') format("ttf") ;
+=======
+/* Contact */
+#contact{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1280px;
+    border: 1px dotted blue;
+    margin:0 10vw;
+>>>>>>> 26541394719055ea315b7f23279dbc7eeb578c2f
 }
