@@ -85,7 +85,6 @@ function custom_post_type_projects() {
 
 }
 
-<<<<<<< HEAD
 add_action( 'init', 'custom_post_type_projects', 0 );
 
 
@@ -151,7 +150,6 @@ function hstngr_register_widget() {
 	register_widget( 'hstngr_widget' );
 }
 add_action( 'widgets_init', 'hstngr_register_widget' );
-=======
 
 // Commentaires pour les articles de blogs // 
 add_filter('comment_form_default_fields', 'website_remove');
@@ -172,4 +170,3 @@ function wpb_move_comment_field_to_bottom( $fields ) {
 	add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
 
 add_action( 'init', 'custom_post_type_projects', 0 );
->>>>>>> 0674c7fee68891c77033e569b898b8de2b6878d9
