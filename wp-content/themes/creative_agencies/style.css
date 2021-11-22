@@ -6,17 +6,9 @@ Author URI: https://www.accesscodeschool.fr/
 Description: Theme of creative agencies
 Version: 1.0
 */
-<<<<<<< HEAD
  /* div{
     border: dotted 1px blue;
 }  */
-=======
-
-li {
-    list-style: none;
-}
-
->>>>>>> 0674c7fee68891c77033e569b898b8de2b6878d9
 html, body {
     margin:0;
     padding: 0;
@@ -63,9 +55,12 @@ h1, h2, h3, h4, h5{
     line-height: 100%;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 header{
     height:20vh; overflow:hidden;
 =======
+=======
+>>>>>>> cc5177ca3cd7bac829cd96d59a61fc823e09740b
 
 /* reset list style */
 ul,
@@ -75,7 +70,10 @@ ul ul li {
    padding: 0;
    text-indent: 0;
    list-style-type: none
+<<<<<<< HEAD
 >>>>>>> 26541394719055ea315b7f23279dbc7eeb578c2f
+=======
+>>>>>>> cc5177ca3cd7bac829cd96d59a61fc823e09740b
 }
 
 
@@ -89,6 +87,9 @@ ul ul li {
     background-color: #d11141;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cc5177ca3cd7bac829cd96d59a61fc823e09740b
 /*HEADER*/
 
 /*FIN HEADER*/
@@ -96,7 +97,10 @@ ul ul li {
 /*SECTION 1*/
 
 /*FIN SECTION 1*/
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cc5177ca3cd7bac829cd96d59a61fc823e09740b
 
 header{
     height: 114px;
@@ -145,14 +149,16 @@ hr{
     line-height: 114px;
 }
 
+<<<<<<< HEAD
 >>>>>>> 26541394719055ea315b7f23279dbc7eeb578c2f
+=======
+>>>>>>> cc5177ca3cd7bac829cd96d59a61fc823e09740b
 
 /*SECTION 2*/
 #section2{
     background-color: #d11141;
     color: white;
     height: 90vh;
-<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -161,9 +167,6 @@ hr{
     display: flex;
     align-items: center;
     justify-content: center;
-=======
-}
->>>>>>> 0674c7fee68891c77033e569b898b8de2b6878d9
 
 }
 .letter{
@@ -407,6 +410,9 @@ hr{
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cc5177ca3cd7bac829cd96d59a61fc823e09740b
 /* COMMENTAIRES  */
 
 .post-comments {
@@ -492,7 +498,11 @@ hr{
 @font-face {
     font-family: GothamBook;
     src: url('gothambook-webfont.woff2') format("woff2"), url('gothambook-webfont.woff') format("woff"), url('GothamBook.ttf') format("ttf") ;
+<<<<<<< HEAD
 =======
+=======
+}
+>>>>>>> cc5177ca3cd7bac829cd96d59a61fc823e09740b
 /* Contact */
 #contact{
     color: white;
@@ -502,5 +512,9 @@ hr{
     max-width: 1280px;
     border: 1px dotted blue;
     margin:0 10vw;
+<<<<<<< HEAD
 >>>>>>> 26541394719055ea315b7f23279dbc7eeb578c2f
 }
+=======
+}
+>>>>>>> cc5177ca3cd7bac829cd96d59a61fc823e09740b
