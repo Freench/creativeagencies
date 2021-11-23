@@ -22,7 +22,7 @@ function special_nav_class ($classes, $item) {
 	return $classes;
 }
 
-/* menu socila (right) */
+/* menu social (right) */
 function SocialMenu(){
     register_nav_menus(
         array(
@@ -31,10 +31,6 @@ function SocialMenu(){
         );
 }
 add_action('init', 'SocialMenu');
-
-
-
-
 
 /*
 * On utilise une fonction pour créer notre custom post type 'projets'
