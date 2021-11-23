@@ -6,10 +6,11 @@ include('header.php');
 ?>
 <!-- Gabarit par défault des pages -->
 
-    <h1><?php the_title(); ?></h1>
-    <div class="content">
+  
+    <article id="main-content">  
+        <h1><?php the_title(); ?></h1>
     <?php the_content(); ?>
-    </div>
+    </article>
 
 
 

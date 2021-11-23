@@ -22,7 +22,7 @@ $subtitle_section_4 = get_field("subtitle_section_4");
     if(!empty($posts)) {
         foreach ($posts as $post) {?> 
             <div class="singleDisplay">
-                    <a href="<?= $post -> guid;?>"> 
+                    <a href="<?= get_permalink();?>"> 
                     <img src="<?= reset(array_shift(get_field('gallery_projects'))) ?>" alt="<?= $post -> post_name;?>"> 
                     </a>
 
