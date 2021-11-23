@@ -413,10 +413,9 @@ hr{
 .single {
     background-color: white;
     box-sizing: border-box;
-    max-width: 60%;
+    max-width: 1200px;
     margin: auto;
     margin-bottom: 5vh;
-    box-shadow: 10px 8px 0px #d11141;
 }
 
 .post-content {
@@ -432,7 +431,7 @@ hr{
     position: relative;
     padding-top: 15px;
     margin: auto;
-    height: 70vh;
+    height: 35vh;
 }
 
 .singleSlide {
@@ -445,7 +444,6 @@ hr{
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 
 .single h1 {
@@ -484,7 +482,7 @@ hr{
   }
 
   /* Fading animation */
-/* .fade {
+.fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
@@ -499,7 +497,7 @@ hr{
   @keyframes fade {
     from {opacity: .6}
     to {opacity: 1}
-  } */
+  }
 
 
 
@@ -507,13 +505,12 @@ hr{
 
 .post-comments {
     background-color: white;
-    max-width: 60%;
+    max-width: 1200px;
     margin: auto;
     margin-bottom: 5vh;
-    box-shadow: 10px 8px 0px #929292;
 }
 .comments {
-    max-width: 60%;
+    max-width: 80%;
     margin: auto;
     padding-bottom: 15px;
     padding-top: 5vh;
@@ -558,6 +555,26 @@ hr{
 
   .comment-body p {
     margin-bottom: 0;
+}
+
+#comment {
+    width: 100%;
+    resize: vertical;
+}
+
+@media (min-width: 768px) {
+    .single {
+        box-shadow: 10px 8px 0px #d11141;
+    }
+
+    .post-comments {
+        box-shadow: 10px 8px 0px #929292;
+    }
+
+    .singleContainer {
+        height: 70vh;
+    }
+    
 }
 
 
