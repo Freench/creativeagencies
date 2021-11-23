@@ -84,6 +84,21 @@ ul ul li {
 .background-red{
     background-color: #d11141;
 }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #d11141;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+/* Fin Scrollbar */
 /*HEADER*/
 header{
     height: 114px;
@@ -176,7 +191,7 @@ hr{
 
 /*FIN HEADER*/
 
-/*                                                          PAGES */
+/* PAGE */
 #main-content{
     max-width: 60%;
     margin: auto;
@@ -231,6 +246,67 @@ hr{
 /*                                                       FIN DE PAGES */
 
 /*SECTION 1*/
+.backgroundImage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110vh;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.section1 {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#page_title {
+    color: white;
+    font-size: 140px;
+    font-family: GothamBold;
+    text-transform: uppercase;
+}
+
+
+#section_1_Title {
+    display: flex;
+}
+
+#scrollBtnDesc {
+    color: white;
+    text-transform: capitalize;
+    font-family: Roboto;
+    transform: translateY(100px);
+}
+
+.scrollDown {
+    position: relative;
+    font-size: 35px;
+    width: 68px;
+    height: 68px;
+    border: white solid 1px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+.scrollDown svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scrollDown:hover {
+    transform: translateY(8px);
+}
+
 
 /*FIN SECTION 1*/
 
@@ -238,7 +314,7 @@ hr{
 #section2{
     background-color: #d11141;
     color: white;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -303,6 +379,7 @@ hr{
 /*FIN SECTION 2*/
 
 /*SECTION 3*/
+
 #section3{
     display: flex;
     flex-direction: column;
@@ -312,7 +389,7 @@ hr{
     display: flex;
     align-items: center;
     width: 100%;
-    height: 60vh;
+    height: 50vh;
 
 }
 .s3-project:nth-child(even){
@@ -341,7 +418,7 @@ hr{
 }
 .s3-img-container{
     width: 50%;
-    height: 60vh;
+    height: 50vh;
 
 
 }
@@ -452,13 +529,9 @@ hr{
 
 /*FIN SECTION 4*/
 
-/*PAGE SINGLES */ 
 
-.bg {
-    background-color: #222222;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-}
+
+/*PAGE SINGLES */ 
 
 .single {
     background-color: white;
@@ -478,11 +551,24 @@ hr{
 }
 
 .singleContainer {
+    padding-top: 3vh;
     position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
     padding-top: 15px;
+    margin: auto;
+    height: 70vh;
+}
+
+.singleSlide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.singleSlide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
 }
 
 .single h1 {
@@ -494,6 +580,52 @@ hr{
 }
 
 
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  /* Fading animation */
+/* .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .6}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .6}
+    to {opacity: 1}
+  } */
+
+/* FIN PAGE SINGLES */ 
 
 /* COMMENTAIRES  */
 
@@ -559,4 +691,41 @@ hr{
 /*FIN PAGE SINGLES*/
 
 /*FOOTER*/
+/*FIN FOOTER*/
+
+#pre-footer{
+    height: 35vh;    
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: #d11141;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: calc(0.5vw + 6px);
+}
+#pre-footer-widgets-area-left, #pre-footer-widgets-area-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#pre-footer-widgets-area-left .widget_media_image, #pre-footer-widgets-area-right .widget_media_image{
+    margin: 40px;
+}
+#pre-footer img{
+    width: 70px;
+}
+#footer-widgets-area{
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    align-items: center;
+    color: white;
+    font-family: Roboto;
+    font-size: calc(0.6vw + 4px);
+
+}
 /*FIN FOOTER*/

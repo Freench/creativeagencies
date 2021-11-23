@@ -57,26 +57,26 @@ function custom_post_type_projects() {
 		'not_found'           => __( 'Auncun projet trouvé'),
 		'not_found_in_trash'  => __( 'Auncun projet trouvé dans la corbeille'),
 	);
-	
+
 	// On peut définir ici d'autres options pour notre custom post type
-	
+
 	$args = array(
 		'label'               => __( 'Projects'),
 		'description'         => __( 'Tout sur les projets'),
 		'labels'              => $labels,
 		// On définit les options disponibles dans l'éditeur de notre custom post type ( un titre, un auteur...)
 		'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields', ),
-		/* 
+		/*
 		* Différentes options supplémentaires
 		*/
 		'show_in_rest' => true,
 		'hierarchical'        => false,
 		'public'              => true,
-		'has_archive'         => true,
+		'has_archive'         => false,
 		'rewrite'			  => array( 'slug' => 'projects'),
 
 	);
-	
+
 	// On enregistre notre custom post type qu'on nomme ici "projets" et ses arguments
 	register_post_type( 'projects', $args );
 
@@ -100,70 +100,98 @@ function footer_widgets_init() {
 
 add_action( 'widgets_init', 'footer_widgets_init' );
 
-class hstngr_widget extends WP_Widget {
+function pre_footer_left_widgets_init() {
 
-	//Insert functions here
+	register_sidebar( array(
+
+	'name' => 'Pre Footer Widgets Area Left',
+	'id' => 'pre-footer-widgets-area-left',
+	// 'before_widget' => '<div class="pre-footer-widgets-area-left">',
+	// 'after_widget' => '</div>',
+	'before_title' => '<h3>',
+	'after_title' => '</h3>',
+	) );
+   }
+
+add_action( 'widgets_init', 'pre_footer_left_widgets_init' );
+
+function pre_footer_right_widgets_init() {
+
+	register_sidebar( array(
+
+	'name' => 'Pre Footer Widgets Area right',
+	'id' => 'pre-footer-widgets-area-right',
+	// 'before_widget' => '<div class="pre-footer-widgets-area-right">',
+	// 'after_widget' => '</div>',
+	'before_title' => '<h3>',
+	'after_title' => '</h3>',
+	) );
+   }
+
+add_action( 'widgets_init', 'pre_footer_right_widgets_init' );
+
+function footer_register_widget() {
+	register_widget( 'footer_widget' );
+	}
+
+add_action( 'widgets_init', 'footer_register_widget' );
+
+class footer_widget extends WP_Widget {
+
 	function __construct() {
 		parent::__construct(
 		// widget ID
 		'footer_widget',
 		// widget name
-		__('Footer Widget', ' hstngr_widget_domain'),
+		__('Footer Sample Widget', ' footer_widget_domain'),
 		// widget description
-		array( 'description' => __( 'Hostinger Widget Tutorial', 'hstngr_widget_domain' ), )
+		array( 'description' => __( 'Footer Widget Tutorial', 'footer_widget_domain' ), )
 		);
 	}
-
 	public function widget( $args, $instance ) {
 		$title = apply_filters( 'widget_title', $instance['title'] );
+		$mention = apply_filters( 'widget_title', $instance['mention'] );
 		echo $args['before_widget'];
-		//if title is present
-		if ( ! empty( $title ) )
-		echo $args['before_title'] . $title . $args['after_title'];
-		//output
-		echo __( 'Hello, World from Hostinger.com', 'hstngr_widget_domain' );
+		
+		//if mention is present
+		if ( ! empty( $mention ) ){
+			echo $args['before_title'] .'© '. $mention .' – All Right Reserved'. $args['after_title'];
+		}
 		echo $args['after_widget'];
-	}
+		
+		//if title is present
+		if ( ! empty( $title ) ){
+			echo $args['before_title'] . 'Designed by ' . $title . $args['after_title'];
+		}
+		echo $args['after_widget'];
 
+		echo $args['before_widget'];
+		
+	}
 	public function form( $instance ) {
-		if ( isset( $instance[ 'title' ] ) )
-		$title = $instance[ 'title' ];
-		else
-		$title = __( 'Default Title', 'hstngr_widget_domain' );
+		if ( isset( $instance[ 'title' ] ) ){
+			$title = $instance[ 'title' ];
+		}
+		if ( isset( $instance[ 'mention' ] ) ){
+			$mention = $instance[ 'mention' ];
+		}
+
 		?>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
-		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'mention' ); ?>"><?php _e( 'Mention:' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'mention' ); ?>" name="<?php echo $this->get_field_name( 'mention' ); ?>" type="text" value="<?php echo esc_attr( $mention ); ?>" />
 		</p>
 		<?php
 	}
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
 		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-		return $instance;
+		$instance['mention'] = ( ! empty( $new_instance['mention'] ) ) ? strip_tags( $new_instance['mention'] ) : '';
+	return $instance;
 	}
-}
-function hstngr_register_widget() {
-	register_widget( 'hstngr_widget' );
-}
-add_action( 'widgets_init', 'hstngr_register_widget' );
-
-// Commentaires pour les articles de blogs // 
-add_filter('comment_form_default_fields', 'website_remove');
-function website_remove($fields)
-{
-if(isset($fields['url']))
-unset($fields['url']);
-return $fields;
-}
-
-function wpb_move_comment_field_to_bottom( $fields ) {
-	$comment_field = $fields['comment'];
-	unset( $fields['comment'] );
-	$fields['comment'] = $comment_field;
-	return $fields;
+	
 	}
-	 
-	add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
-
-add_action( 'init', 'custom_post_type_projects', 0 );
