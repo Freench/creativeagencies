@@ -35,7 +35,16 @@
 
     ?>
     </div>
-
+    <div id="btHeaven">&#9776;</div>
+    <script>
+        let heaven =  document.querySelector('#btHeaven');
+        let menu = document.querySelector('#mainMenu');
+        heaven.addEventListener('click', function (){
+            // console.log('click');
+            heaven.classList.toggle('rot90');
+            menu.classList.toggle('animatedMenu')
+        })
+    </script>
     </header>
     <hr>
 

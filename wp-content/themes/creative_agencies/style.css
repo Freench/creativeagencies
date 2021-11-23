@@ -92,7 +92,6 @@ header{
     align-items:center;
     margin:0 10vw;
     max-width: 1280px;
-    /* border: 1px dotted blue; */
 }
 
 hr{
@@ -107,41 +106,75 @@ hr{
 .menu {
     display: flex;
 }
-
 #navs{
     display: flex;
 }
-
 .menu-item a:link, a:visited, a:active{ color:white; }
 .menu-item a:hover{ color:#d11141; }
+
 #mainMenu .menu-item {
     margin-right: 34px;
-    font-size: px;;
+    font-size: 20px;
     line-height: 114px;
     font-family: Roboto;
     white-space: nowrap;
 }
-
 .active{
     border-bottom: 4px solid #d11141;
 }
-
 #socialMenu .menu-item{
     margin-right: 18px;
     line-height: 114px;
 }
 
+#btHeaven{
+    display: none;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.rot90 {
+    transform: rotate(-90deg);
+}
+.animatedMenu{
+    margin-top:0 !important;
+}
 
 /* media querie */
 @media screen and (max-width: 810px) {
-    /* .menu{
-        display:none; 
-    } */
+    header{
+        /* flex-direction: column; */
+        height:fit-content;
+        padding:15px;
+        margin:5px;
+        align-items:flex-start;
+
+    }
+    #btHeaven{
+        display: inline-block;
+    }
+    .menu{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #mainMenu{
+        margin-top: -300px;
+        transition:0.2s;
+    }
+
+    #mainMenu .menu-item   {
+        line-height: 40px;
+        font-size: x-large;
+    }
+
+    #socialMenu {
+        display:none;
+    }
+   
 }
 
 /*FIN HEADER*/
-
-
 
 /*                                                          PAGES */
 #main-content{
