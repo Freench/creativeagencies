@@ -1,5 +1,3 @@
-
-
 <?php
 $title_section_4 = get_field("title_section_4");
 $watermark_section_4 = get_field("watermark_section_4");

@@ -26,6 +26,28 @@ body{
     font-family: GothamBook;
     background-color: #222222;
 }
+
+@font-face {
+    font-family: Roboto;
+    src: url('roboto-regular-webfont.woff2') format("woff2"), url('roboto-regular-webfont.woff') format("woff"), url('Roboto-Regular.ttf') format("ttf");
+}
+@font-face {
+    font-family: RobotoBlack;
+    src: url('roboto-black-webfont.woff2') format("woff2"), url('roboto-black-webfont.woff') format("woff"), url('Roboto-Black.ttf') format("ttf");
+}
+@font-face {
+    font-family: GothamMedium;
+    src:  url('gothammedium-webfont.woff2') format("woff2"), url('gothammedium-webfont.woff') format("woff"),url('GothamMedium.ttf') format("ttf");
+}
+@font-face {
+    font-family: GothamBold;
+    src: url('gothambold-webfont.woff2') format("woff2"), url('gothambold-webfont.woff') format("woff"), url('GothamBold.ttf') format("ttf");
+}
+@font-face {
+    font-family: GothamBook;
+    src: url('gothambook-webfont.woff2') format("woff2"), url('gothambook-webfont.woff') format("woff"), url('GothamBook.ttf') format("ttf") ;
+}
+
 a:link, a:visited, a:active{
     text-decoration: none;
     color: #d11141;
@@ -109,7 +131,71 @@ hr{
     line-height: 114px;
 }
 
+
+/* media querie */
+@media screen and (max-width: 810px) {
+    /* .menu{
+        display:none; 
+    } */
+}
+
 /*FIN HEADER*/
+
+
+
+/*                                                          PAGES */
+#main-content{
+    max-width: 60%;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom:5vh;
+    padding-bottom: 5vh;
+    box-shadow: 10px 8px 0px #d11141;
+    background-color: white;
+    min-width: 320px;
+
+}
+#main-content h1{
+    font-family: GothamMedium;
+    color: #d11141;
+    text-transform: uppercase;
+    padding: 35px;
+    font-size: 2em;
+}
+#main-content p{
+    padding: 15px 35px;
+}
+#main-content p img{
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+/* formulaire de contact */
+.wpcf7{
+   padding:35px;
+   margin:auto;
+}
+.wpcf7 input[type=text], input[type=email]{
+    font-size: larger;
+    max-width: 100%;
+}
+.wpcf7 input[type=submit]{
+    background-color: #d11141;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.2s;
+}
+.wpcf7 textarea{
+    width:100%;
+}
+
+/*                                                       FIN DE PAGES */
 
 /*SECTION 1*/
 
@@ -371,6 +457,7 @@ hr{
     color: #d11141;
     text-transform: uppercase;
     padding: 15px;
+   
 }
 
 
@@ -436,28 +523,7 @@ hr{
 
 
 
-
 /*FIN PAGE SINGLES*/
 
 /*FOOTER*/
 /*FIN FOOTER*/
-@font-face {
-    font-family: Roboto;
-    src: url('roboto-regular-webfont.woff2') format("woff2"), url('roboto-regular-webfont.woff') format("woff"), url('Roboto-Regular.ttf') format("ttf");
-}
-@font-face {
-    font-family: RobotoBlack;
-    src: url('roboto-black-webfont.woff2') format("woff2"), url('roboto-black-webfont.woff') format("woff"), url('Roboto-Black.ttf') format("ttf");
-}
-@font-face {
-    font-family: GothamMedium;
-    src:  url('gothammedium-webfont.woff2') format("woff2"), url('gothammedium-webfont.woff') format("woff"),url('GothamMedium.ttf') format("ttf");
-}
-@font-face {
-    font-family: GothamBold;
-    src: url('gothambold-webfont.woff2') format("woff2"), url('gothambold-webfont.woff') format("woff"), url('GothamBold.ttf') format("ttf");
-}
-@font-face {
-    font-family: GothamBook;
-    src: url('gothambook-webfont.woff2') format("woff2"), url('gothambook-webfont.woff') format("woff"), url('GothamBook.ttf') format("ttf") ;
-}
