@@ -1,5 +1,5 @@
 <div id="s2-title-container">
-    <span class="letter"> <?= get_field('watermark_section_2')?></span>
+    <div class="letter"> <?= get_field('watermark_section_2')?></div>
     <h2 id="s2-title"><?= get_field("title_section_2") ?></h2>
 </div>
 <div id="s2-content-container">
