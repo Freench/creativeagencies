@@ -251,12 +251,7 @@ hr{
     justify-content: space-evenly;
 }
 
-#page_title {
-    color: white;
-    font-size: 140px;
-    font-family: GothamBold;
-    text-transform: uppercase;
-}
+
 
 
 #section_1_Title {
@@ -485,6 +480,9 @@ hr{
 }
 
 @media screen and (max-width: 500px) {
+    #page_title{
+        font-size: 40px !important;
+    }
     .s3-project{
         height:fit-content;
         flex-wrap: wrap;
@@ -494,7 +492,7 @@ hr{
         /* height: 50%; */
         /* padding-left: 20%;
         padding-right: 20%; */
-        font-size: 18px;
+        font-size: 16px;
         line-height: 24px;
         padding: 30px;
 
@@ -558,13 +556,11 @@ hr{
 }
 
 .recentPosts {
-    max-width: 100%;
     margin: auto;
-    font-size: 15px;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
@@ -574,10 +570,12 @@ hr{
     flex-direction: column;
     align-items: center;
     justify-items: flex-start;
+    margin: 0 40px;
+    font-size: calc(0.7vw + 8px);
 }
 
 .singleDisplay h5 {
-    font-size: 18px;
+    font-size: 16px;
     color: #d11141;
     text-transform: uppercase;
     margin: 0;
@@ -666,7 +664,7 @@ hr{
     padding: 16px;
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -807,7 +805,7 @@ hr{
 
 /* MEDIA QUERY */
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .fof {
         background: url(../creative_agencies/izzy2.png) no-repeat bottom center;
         font-size: 14px;
@@ -821,7 +819,7 @@ hr{
     }
 
     .singleContent {
-        height: 45vh;
+        height: fit-content;
         text-align: center;
     }
 
@@ -834,12 +832,15 @@ hr{
         flex-direction: row;
         flex-wrap: wrap;
         align-content: space-around;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
     }
 
 
-
+    .singleDisplay{
+        font-size: 16px;
+        padding-bottom: 16px;
+    }
 
    
 }
@@ -947,15 +948,28 @@ hr{
         margin-bottom: 15px;
     }
     #section2 p{
-        font-size: 18px;
+        font-size: 16px;
         line-height: 24px;
     }
     /*FIN SECTION 2*/
 
+    /* SECTION 4*/ 
+    .s3-project-content{
+        font-size: 16px;
+    }
+    #s2-title{
+        font-size: 36px;
+        margin-top: -140px;
+    }
+    .letter{
+        font-size: 240px;
+        line-height: 240px;
+    }
     /*Footer*/
     #pre-footer{
-        flex-direction: column;
+        flex-wrap: wrap;
         height: fit-content;
+        font-size: 14px;
     }
     #pre-footer-widgets-area-left, #pre-footer-widgets-area-right{
         display: flex;
