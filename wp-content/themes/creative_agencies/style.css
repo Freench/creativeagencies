@@ -555,7 +555,7 @@ hr{
 }
 
 .recentPosts {
-    max-width: 80%;
+    max-width: 100%;
     margin: auto;
     font-size: 15px;
     display: flex;
@@ -569,7 +569,7 @@ hr{
     width: 30vh;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
     justify-items: flex-start;
 }
 
@@ -819,6 +819,7 @@ hr{
 
     .singleContent {
         height: 45vh;
+        text-align: center;
     }
 
 
