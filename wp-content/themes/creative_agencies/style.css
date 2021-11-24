@@ -116,8 +116,10 @@ ul ul li {
 header{
     height: 114px;
     display: flex;
-    align-items: center;
-    /* margin:0 10vw; */
+    justify-content: space-between;
+    align-items:center;
+    margin:0 10vw;
+    max-width: 1280px;
 }
 
 hr{
@@ -127,19 +129,17 @@ hr{
     height: 1px;
 }
 
-.logo{
-    flex-grow: 2; 
-    text-align: right;
-}
+
 /* Menu */
-.menu { display: flex; }
+.menu {
+    display: flex;
+}
+#navs{
+    display: flex;
+}
 .menu-item a:link, a:visited, a:active{ color:white; }
 .menu-item a:hover{ color:#d11141; }
-#mainMenu{
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 8;
-}
+
 #mainMenu .menu-item {
     margin-right: 34px;
     font-size: 20px;
@@ -147,8 +147,9 @@ hr{
     font-family: Roboto;
     white-space: nowrap;
 }
-.active{ border-bottom: 4px solid #d11141; }
-#socialMenu{ flex-grow: 2; }
+.active{
+    border-bottom: 4px solid #d11141;
+}
 #socialMenu .menu-item{
     margin-right: 18px;
     line-height: 114px;
@@ -169,27 +170,6 @@ hr{
 }
 
 /* media querie */
-@media screen and (max-width: 1024px) {
-    header{
-        /* flex-direction: column; */
-        height:fit-content;
-        padding:15px;
-        margin:5px;
-        align-items:flex-start;
-
-    }
-    .logo{ text-align: left; }
-    #btHeaven{
-        display: inline-block;
-    }
-    .menu{
-        flex-direction: column;
-        align-items: flex-end;
-    }
-    #mainMenu{
-        margin-top: -300px;
-        transition:0.2s;
-    }
 
 
 /*FIN HEADER*/
