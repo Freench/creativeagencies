@@ -147,7 +147,7 @@ hr{
 
 #page_title {
     color: white;
-    font-size: 140px;
+    font-size: 8vw;
     font-family: GothamBold;
     text-transform: uppercase;
 }
@@ -161,7 +161,7 @@ hr{
     color: white;
     text-transform: capitalize;
     font-family: Roboto;
-    transform: translateY(100px);
+    transform: translateY(8vh);
 }
 
 .scrollDown {
@@ -358,7 +358,7 @@ hr{
 }
 
 .recentPosts {
-    width: 76%;
+    max-width: 80%;
     margin: auto;
     font-size: 15px;
     display: flex;
@@ -402,8 +402,7 @@ hr{
 .singleContent {
     margin: 0 10px 0 10px;
     padding-bottom: 10px;
-    height: 171px;
-    overflow: hidden;
+    height: 30vh;
 }
 
 /*FIN SECTION 4*/
@@ -603,14 +602,41 @@ hr{
 
 }
 
+/* MEDIA QUERY */
+
 @media (max-width: 1024px) {
     .fof {
         background: url(../creative_agencies/izzy2.png) no-repeat bottom center;
-        font-size: 12px;
-        max-height: 100vh;
+        font-size: 14px;
+        max-height: 100%;
         justify-content: start;
         padding-top: 8vh;
     }
+
+    #page_title {
+        font-size: 55px; 
+    }
+
+    .singleContent {
+        height: 45vh;
+    }
+
+
+    .recentPosts {
+        width: 100%;
+        margin: auto;
+        font-size: 16px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+
+
    
 }
 

@@ -28,7 +28,7 @@ $subtitle_section_4 = get_field("subtitle_section_4");
 
                     <div class=singleContent>
                         <h5><?= $post -> post_title;?></h5>
-                        <?= $post -> post_content;?>
+                        <?= mb_strimwidth($post -> post_content, 0, 156, "...");?>
                     </div>
             </div>
             <?php
