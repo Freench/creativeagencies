@@ -13,27 +13,26 @@ $subtitle_section_4 = get_field("subtitle_section_4");
 </div>
 
 <div class="recentPosts">
-<?php 
+    <?php 
 
-// print_r(query_posts('posts_per_page=4'));
-    $posts = query_posts('posts_per_page=4');
-    if(!empty($posts)) {
-        foreach ($posts as $post) {?> 
-            <div class="singleDisplay">
-                    <a href="<?= get_permalink();?>"> 
-                    <img src="<?= reset(array_shift(get_field('gallery_projects'))) ?>" alt="<?= $post -> post_name;?>"> 
-                    </a>
+        $posts = query_posts('posts_per_page=4');
+        if(!empty($posts)) {
+            foreach ($posts as $post) {?>
+                <div class="singleDisplay">
+                        <a href="<?= get_permalink();?>"> 
+                            <img src="<?= reset(array_shift(get_field('gallery_projects'))) ?>" alt="<?= $post -> post_name;?>"> 
+                        </a>
 
-                    <div class=singleContent>
-                        <h5><?= $post -> post_title;?></h5>
-                        <?= mb_strimwidth($post -> post_content, 0, 156, "...");?>
-                    </div>
-            </div>
-            <?php
+                        <div class=singleContent>
+                            <h5><?= $post -> post_title;?></h5>
+                            <?= mb_strimwidth($post -> post_content, 0, 156, "...");?>
+                        </div>
+                </div>
+                <?php
+            }
         }
-    }
 
-?>
+    ?>
 
 </div>
 
