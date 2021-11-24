@@ -116,8 +116,7 @@ ul ul li {
 header{
     height: 114px;
     display: flex;
-    justify-content: space-between;
-    align-items:center;
+    align-items: center;
     margin:0 10vw;
     max-width: 1280px;
 }
@@ -129,10 +128,22 @@ hr{
     height: 1px;
 }
 
-
+.logo{
+    flex-grow: 1; 
+}
 /* Menu */
 .menu {
     display: flex;
+    justify-content: flex-end;
+}
+#navs{
+    display: flex;
+}
+.menu-item a:link, a:visited, a:active{ color:white; }
+.menu-item a:hover{ color:#d11141; }
+#mainMenu{
+    text-align: right;
+    flex-grow: 8; 
 }
 #navs{
     display: flex;
@@ -150,6 +161,9 @@ hr{
 .active{
     border-bottom: 4px solid #d11141;
 }
+#socialMenu{
+    flex-grow: 2; 
+ }
 #socialMenu .menu-item{
     margin-right: 18px;
     line-height: 114px;
@@ -170,8 +184,6 @@ hr{
 }
 
 /* media querie */
-<<<<<<< HEAD
-=======
 @media screen and (max-width: 810px) {
     header{
         /* flex-direction: column; */
@@ -192,7 +204,6 @@ hr{
         margin-top: -300px;
         transition:0.2s;
     }
->>>>>>> parent of 4695f30 (reglages header responsive and more)
 
 
 /*FIN HEADER*/
