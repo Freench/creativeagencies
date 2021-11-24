@@ -16,7 +16,6 @@ html, body {
 }
 html{
     scroll-behavior: smooth;
-    
 }
 * {
     box-sizing: border-box;
@@ -374,11 +373,11 @@ hr{
 }
 #s2-title{
     text-align: center;
-    margin-top: -15vh;
+    margin-top: -14vh;
     z-index: 2;
     text-transform: uppercase;
     font-family: GothamMedium;
-    font-size: 6vh;
+    font-size: 3.7vh;
     /* font-weight: 500; */
 }
 #s2-content-container{
@@ -451,7 +450,7 @@ hr{
     background-color: #222222;
     color: white;
     padding-right: 5vw;
-    font-size: calc(0.8vw + 5px);
+    font-size: calc(0.8vw + 10px);
 }
 .s3-project:nth-child(even) .s3-project-content{
     padding-right: 10vw;
@@ -615,6 +614,7 @@ hr{
     max-width: 1200px;
     margin: auto;
     margin-bottom: 5vh;
+    margin-top: 5vh;
 }
 
 .post-content {
