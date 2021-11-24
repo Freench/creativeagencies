@@ -209,6 +209,7 @@ hr{
    padding:35px;
    margin:auto;
 }
+.wpcf7 textarea { resize: none; }
 .wpcf7 input[type=text], input[type=email]{
     font-size: larger;
     max-width: 100%;
