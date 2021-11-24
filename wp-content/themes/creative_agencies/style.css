@@ -104,8 +104,7 @@ header{
     height: 114px;
     display: flex;
     align-items: center;
-    margin:0 10vw;
-    max-width: 1280px;
+    /* margin:0 10vw; */
 }
 
 hr{
@@ -116,21 +115,17 @@ hr{
 }
 
 .logo{
-    flex-grow: 1; 
+    flex-grow: 2; 
+    text-align: right;
 }
 /* Menu */
-.menu {
-    display: flex;
-    justify-content: flex-end;
-}
-#navs{
-    display: flex;
-}
+.menu { display: flex; }
 .menu-item a:link, a:visited, a:active{ color:white; }
 .menu-item a:hover{ color:#d11141; }
 #mainMenu{
-    text-align: right;
-    flex-grow: 8; 
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 8;
 }
 #mainMenu .menu-item {
     margin-right: 34px;
@@ -139,12 +134,8 @@ hr{
     font-family: Roboto;
     white-space: nowrap;
 }
-.active{
-    border-bottom: 4px solid #d11141;
-}
-#socialMenu{
-    flex-grow: 2; 
- }
+.active{ border-bottom: 4px solid #d11141; }
+#socialMenu{ flex-grow: 2; }
 #socialMenu .menu-item{
     margin-right: 18px;
     line-height: 114px;
@@ -174,6 +165,7 @@ hr{
         align-items:flex-start;
 
     }
+    .logo{ text-align: left; }
     #btHeaven{
         display: inline-block;
     }
