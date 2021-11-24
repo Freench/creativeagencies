@@ -12,7 +12,7 @@
 <body>
     <header>
     <div class="logo"><a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_site_icon_url(); ?> " width="79" alt="logo"></a></div>
-    <div id="navs">
+    <!-- <div id="navs"> -->
     <?php
 
         if ( has_nav_menu( 'header-menu' ) ){
@@ -34,7 +34,7 @@
         }
 
     ?>
-    </div>
+    <!-- </div> -->
     <div id="btHeaven">&#9776;</div>
     <script>
         let heaven =  document.querySelector('#btHeaven');
