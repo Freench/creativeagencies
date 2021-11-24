@@ -27,7 +27,6 @@ if($the_query->have_posts() ) :
             </a>
 
             <div class="s3-img-container">
-            
                 <img src="<?= $gallery[0]['image_gallery'] ; ?>" alt="Une image">
             </div>
         </div>
