@@ -577,15 +577,45 @@ hr{
     
 }
 
-
-
-
-
-
 /*FIN PAGE SINGLES*/
 
 /*FOOTER*/
 /*FIN FOOTER*/
+
+
+/*404*/ 
+.fof {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5vw;
+    height: 85vh;
+    background: url(../creative_agencies/izzy.png) no-repeat bottom left 10%;
+}
+
+#fourofour {
+    font-size: 12em;
+    color: #d11141;
+    text-shadow: 8px 8px 12px rgb(0, 0, 0);
+    font-family: GothamBold;
+
+}
+
+@media (max-width: 1024px) {
+    .fof {
+        background: url(../creative_agencies/izzy2.png) no-repeat bottom center;
+        font-size: 12px;
+        max-height: 100vh;
+        justify-content: start;
+        padding-top: 8vh;
+    }
+   
+}
+
+/* FIN 404 */
+
 @font-face {
     font-family: Roboto;
     src: url('roboto-regular-webfont.woff2') format("woff2"), url('roboto-regular-webfont.woff') format("woff"), url('Roboto-Regular.ttf') format("ttf");
