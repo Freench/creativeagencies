@@ -145,9 +145,6 @@ hr{
     text-align: right;
     flex-grow: 8; 
 }
-#navs{
-    display: flex;
-}
 .menu-item a:link, a:visited, a:active{ color:white; }
 .menu-item a:hover{ color:#d11141; }
 
