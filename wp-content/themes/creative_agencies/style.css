@@ -26,6 +26,28 @@ body{
     font-family: GothamBook;
     background-color: #222222;
 }
+
+@font-face {
+    font-family: Roboto;
+    src: url('roboto-regular-webfont.woff2') format("woff2"), url('roboto-regular-webfont.woff') format("woff"), url('Roboto-Regular.ttf') format("ttf");
+}
+@font-face {
+    font-family: RobotoBlack;
+    src: url('roboto-black-webfont.woff2') format("woff2"), url('roboto-black-webfont.woff') format("woff"), url('Roboto-Black.ttf') format("ttf");
+}
+@font-face {
+    font-family: GothamMedium;
+    src:  url('gothammedium-webfont.woff2') format("woff2"), url('gothammedium-webfont.woff') format("woff"),url('GothamMedium.ttf') format("ttf");
+}
+@font-face {
+    font-family: GothamBold;
+    src: url('gothambold-webfont.woff2') format("woff2"), url('gothambold-webfont.woff') format("woff"), url('GothamBold.ttf') format("ttf");
+}
+@font-face {
+    font-family: GothamBook;
+    src: url('gothambook-webfont.woff2') format("woff2"), url('gothambook-webfont.woff') format("woff"), url('GothamBook.ttf') format("ttf") ;
+}
+
 a:link, a:visited, a:active{
     text-decoration: none;
     color: #d11141;
@@ -75,6 +97,21 @@ ul ul li {
 .background-red{
     background-color: #d11141;
 }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #d11141;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+/* Fin Scrollbar */
 /*HEADER*/
 header{
     height: 114px;
@@ -83,7 +120,6 @@ header{
     align-items:center;
     margin:0 10vw;
     max-width: 1280px;
-    /* border: 1px dotted blue; */
 }
 
 hr{
@@ -98,33 +134,162 @@ hr{
 .menu {
     display: flex;
 }
-
 #navs{
     display: flex;
 }
-
 .menu-item a:link, a:visited, a:active{ color:white; }
 .menu-item a:hover{ color:#d11141; }
+
 #mainMenu .menu-item {
     margin-right: 34px;
-    font-size: px;;
+    font-size: 20px;
     line-height: 114px;
     font-family: Roboto;
     white-space: nowrap;
 }
-
 .active{
     border-bottom: 4px solid #d11141;
 }
-
 #socialMenu .menu-item{
     margin-right: 18px;
     line-height: 114px;
 }
 
+#btHeaven{
+    display: none;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.rot90 {
+    transform: rotate(-90deg);
+}
+.animatedMenu{
+    margin-top:0 !important;
+}
+
+/* media querie */
+
+
 /*FIN HEADER*/
 
+/* PAGE */
+#main-content{
+    max-width: 60%;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom:5vh;
+    padding-bottom: 5vh;
+    box-shadow: 10px 8px 0px #d11141;
+    background-color: white;
+    min-width: 320px;
+
+}
+#main-content h1{
+    font-family: GothamMedium;
+    color: #d11141;
+    text-transform: uppercase;
+    padding: 35px;
+    font-size: 2em;
+}
+#main-content p{
+    padding: 15px 35px;
+}
+#main-content p img{
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+/* formulaire de contact */
+.wpcf7{
+   padding:35px;
+   margin:auto;
+}
+.wpcf7 input[type=text], input[type=email]{
+    font-size: larger;
+    max-width: 100%;
+}
+.wpcf7 input[type=submit]{
+    background-color: #d11141;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.2s;
+}
+.wpcf7 textarea{
+    width:100%;
+}
+
+/*                                                       FIN DE PAGES */
+
 /*SECTION 1*/
+.backgroundImage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110vh;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.section1 {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#page_title {
+    color: white;
+    font-size: 140px;
+    font-family: GothamBold;
+    text-transform: uppercase;
+}
+
+
+#section_1_Title {
+    display: flex;
+}
+
+#scrollBtnDesc {
+    color: white;
+    text-transform: capitalize;
+    font-family: Roboto;
+    transform: translateY(100px);
+}
+
+.scrollDown {
+    position: relative;
+    font-size: 35px;
+    width: 68px;
+    height: 68px;
+    border: white solid 1px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+.scrollDown svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scrollDown:hover {
+    transform: translateY(8px);
+}
+
 
 .backgroundImage img {
     position: absolute;
@@ -194,29 +359,28 @@ hr{
 #section2{
     background-color: #d11141;
     color: white;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-#s2-title-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-}
 .letter{
+    text-align: center;
     z-index: 1;
-    font-size: 22vh;
-    position: absolute;
+    font-size: 24vh;
+    line-height: 24vh;
+    /* position: absolute; */
     font-family: RobotoBlack ;
     color: #da3d64;
 }
 #s2-title{
+    text-align: center;
+    margin-top: -15vh;
     z-index: 2;
     text-transform: uppercase;
     font-family: GothamMedium;
-    font-size: calc(1.8vw + 15px);
+    font-size: 6vh;
     /* font-weight: 500; */
 }
 #s2-content-container{
@@ -256,9 +420,12 @@ hr{
     line-height: calc(1vh + 1.2vw + 4px);
     text-align: center;
 }
+
+
 /*FIN SECTION 2*/
 
 /*SECTION 3*/
+
 #section3{
     display: flex;
     flex-direction: column;
@@ -268,7 +435,7 @@ hr{
     display: flex;
     align-items: center;
     width: 100%;
-    height: 60vh;
+    height: 50vh;
 
 }
 .s3-project:nth-child(even){
@@ -297,7 +464,7 @@ hr{
 }
 .s3-img-container{
     width: 50%;
-    height: 60vh;
+    height: 50vh;
 
 
 }
@@ -312,6 +479,36 @@ hr{
     text-transform: uppercase;
     margin-top: 4vh;
     margin-bottom: calc(5px + 6vh);
+}
+
+@media screen and (max-width: 500px) {
+    .s3-project{
+        height:fit-content;
+        flex-wrap: wrap;
+    }
+    .s3-project-content{
+        width: 100%;
+        /* height: 50%; */
+        /* padding-left: 20%;
+        padding-right: 20%; */
+        font-size: 18px;
+        line-height: 24px;
+        padding: 30px;
+
+    }
+    .s3-project:nth-child(even) .s3-project-content{
+        padding: 25px;
+        padding: 25px;
+    }
+    .s3-img-container{
+        width: 100%;
+        height: 25vh;
+    }
+    #section3 h3{
+        text-transform: uppercase;
+        margin-top: 2vh;
+        margin-bottom: calc(2px + 2vh);
+    }
 }
 /*FIN SECTION 3*/
 
@@ -407,6 +604,8 @@ hr{
 
 /*FIN SECTION 4*/
 
+
+
 /*PAGE SINGLES */ 
 
 .single {
@@ -450,6 +649,7 @@ hr{
     color: #d11141;
     text-transform: uppercase;
     padding: 15px;
+   
 }
 
 
@@ -642,23 +842,122 @@ hr{
 
 /* FIN 404 */
 
-@font-face {
+#pre-footer{
+    height: 35vh;    
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: #d11141;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: calc(0.5vw + 6px);
+}
+#pre-footer-widgets-area-left, #pre-footer-widgets-area-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#pre-footer-widgets-area-left .widget_media_image, #pre-footer-widgets-area-right .widget_media_image{
+    margin: 40px;
+}
+#pre-footer img{
+    width: 70px;
+}
+#footer-widgets-area{
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    align-items: center;
+    color: white;
     font-family: Roboto;
-    src: url('roboto-regular-webfont.woff2') format("woff2"), url('roboto-regular-webfont.woff') format("woff"), url('Roboto-Regular.ttf') format("ttf");
+    font-size: calc(0.6vw + 4px);
+
 }
-@font-face {
-    font-family: RobotoBlack;
-    src: url('roboto-black-webfont.woff2') format("woff2"), url('roboto-black-webfont.woff') format("woff"), url('Roboto-Black.ttf') format("ttf");
-}
-@font-face {
-    font-family: GothamMedium;
-    src:  url('gothammedium-webfont.woff2') format("woff2"), url('gothammedium-webfont.woff') format("woff"),url('GothamMedium.ttf') format("ttf");
-}
-@font-face {
-    font-family: GothamBold;
-    src: url('gothambold-webfont.woff2') format("woff2"), url('gothambold-webfont.woff') format("woff"), url('GothamBold.ttf') format("ttf");
-}
-@font-face {
-    font-family: GothamBook;
-    src: url('gothambook-webfont.woff2') format("woff2"), url('gothambook-webfont.woff') format("woff"), url('GothamBook.ttf') format("ttf") ;
+/*FIN FOOTER*/
+
+
+@media screen and (max-width: 1024px) {
+
+    /* NAV */
+    header{
+        /* flex-direction: column; */
+        height:fit-content;
+        padding:15px;
+        margin:5px;
+        align-items:flex-start;
+
+    }
+    #btHeaven{
+        display: inline-block;
+    }
+    .menu{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #mainMenu{
+        margin-top: -300px;
+        transition:0.2s;
+    }
+
+    #mainMenu .menu-item   {
+        line-height: 40px;
+        font-size: x-large;
+    }
+
+    #socialMenu {
+        display:none;
+    }
+    /* FIN NAV */
+
+
+    /*SECTION 2*/
+    #section2{
+        height: fit-content;
+    }
+    *{
+        border: dotted 1px blue;
+    }
+    #s2-content-container{
+        flex-wrap: wrap;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        align-content:space-around;
+        height: fit-content;
+        margin-top: 150px;
+    }
+    .s2-bloc{
+        width: 200px;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-bottom: 2vh;
+    }
+    #section2 img{
+        height: 28px;
+        margin-bottom: 4%;
+    }
+    #section2 h3{
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    #section2 p{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    /*FIN SECTION 2*/
+
+    /*Footer*/
+    #pre-footer{
+        flex-direction: column;
+        height: fit-content;
+    }
+    #pre-footer-widgets-area-left, #pre-footer-widgets-area-right{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    /*Fin footer*/
 }
